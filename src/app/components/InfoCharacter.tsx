@@ -1,14 +1,8 @@
-/* import react hooks */
 import { useEffect, useState } from "react";
-
-/* import components */
 import Image from "next/image";
 import LoaderImage from "./LoaderImage";
-
-/* import gsap */
 import { gsap } from "gsap";
 
-/* info characters props */
 interface InfoCharacterProps {
   characterSelected: any;
   gameId: number;
@@ -19,14 +13,11 @@ const InfoCharacter = ({
   characterSelected,
   gameId,
 }: InfoCharacterProps): JSX.Element => {
-  /* load image state */
   const [loadImageState, setLoadImageState] = useState(false);
 
   useEffect(() => {
-    /* each time a character is selected, set the value of loadImageState to false  */
     setLoadImageState(false);
 
-    /* character info elements */
     const imageFull = document.querySelector(
       `#image-character__full__${characterSelected?.id}`
     );
@@ -38,7 +29,6 @@ const InfoCharacter = ({
       `.character-selected__description__${characterSelected?.id}`
     );
 
-    /* add opacity to the image so it is not visible */
     imageFull?.classList.add("opacity-on");
 
     gsap.fromTo(
@@ -70,12 +60,10 @@ const InfoCharacter = ({
       <figure
         className={`w-[500px] h-[550px] mr-2 relative info-characters__container__${gameId} opacity-0 character-container__effect max-[870px]:w-[300px] max-[870px]:h-[400px] opacity-1 transition-all`}
       >
-        {/* image gradient effec */}
         <div className="image-effect__right"></div>
         <div className="image-effect__top"></div>
         <div className="image-effect__left"></div>
 
-        {/* loading spinner if image did not load */}
         {!loadImageState && <LoaderImage />}
         {characterSelected?.id && (
           <>
@@ -90,7 +78,6 @@ const InfoCharacter = ({
               sizes="100%"
               quality={100}
               priority={true}
-              /* when the image load is complete, remove the opacity and set the loadImageState value to true  */
               onLoadingComplete={(img) => {
                 img.classList.remove("opacity-on");
                 setLoadImageState(true);
