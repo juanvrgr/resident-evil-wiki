@@ -26,6 +26,7 @@ const Epilogue = ({ epilogue, id }: PropEpilogue): JSX.Element => {
             alt="umbrella-epilogue"
             width={48}
             height={48}
+            loading="lazy"
           />
         </div>
         <span
@@ -53,6 +54,7 @@ const Epilogue = ({ epilogue, id }: PropEpilogue): JSX.Element => {
             alt="umbrella-epilogue"
             width={48}
             height={48}
+            loading="lazy"
           />
         </div>
         <span

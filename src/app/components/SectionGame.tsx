@@ -609,6 +609,7 @@ const SectionGame = ({
                     width: "100%",
                     height: "100%",
                   }}
+                  loading="lazy"
                 />
               </figure>
             ))}
@@ -635,6 +636,7 @@ const SectionGame = ({
                   width: "100%",
                   height: "100%",
                 }}
+                loading="lazy"
               />
             </figure>
           ))}

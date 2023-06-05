@@ -41,6 +41,7 @@ const CharactersSelect = ({
             height: "70px",
             objectFit: "cover",
           }}
+          loading="lazy"
         />
         <span
           className={

@@ -88,6 +88,7 @@ const Footer = (): JSX.Element => {
               height={50}
               width={50}
               alt="linkedIn"
+              loading="lazy"
             />
           </a>
           <a
@@ -100,6 +101,7 @@ const Footer = (): JSX.Element => {
               height={50}
               width={50}
               alt="gitHub"
+              loading="lazy"
             />
           </a>
         </div>
