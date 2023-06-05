@@ -58,8 +58,8 @@ const TitleHome = (): JSX.Element => {
           className="inline-block scale-x-[1] scale-y-[1.2] tracking-wider title-archives__effect pb-2 w-full max-[870px]:w-auto"
         >
           A <b className="text__effect__test">fan</b> website about all{" "}
-          <b className="text__effect__test">re</b>sident evil{" "}
-          <b className="text__effect__test">games</b>
+          <b className="text__effect__test">Re</b>sident Evil{" "}
+          <b className="text__effect__test">games information</b>
         </h2>
       </div>
     </div>
