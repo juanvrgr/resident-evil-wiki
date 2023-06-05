@@ -1,22 +1,15 @@
 "use client";
 
-/* import react hooks */
 import { useEffect, useState } from "react";
-
-/* import componentes */
 import TitleHome from "@/app/components/TitleHome";
 import ScrollSection from "./components/ScrollSection";
 import Image from "next/image";
-
-/* import gsap */
 import { gsap } from "gsap";
 import Footer from "./components/Footer";
 export default function Home() {
-  /* first load page */
   const [loadingPageState, setLoadingPageState] = useState<boolean>(true);
 
   useEffect(() => {
-    /* when the page load, wait two seconds and setloadingpage in false */
     const html = document.querySelector("html");
     setTimeout(() => {
       setLoadingPageState(false);
