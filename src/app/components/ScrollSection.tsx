@@ -2,7 +2,6 @@ import getGames from "../../utils/games.json";
 import SectionGame from "./SectionGame";
 
 const ScrollSection = (): JSX.Element => {
-  /* get games */
   const games = getGames.games;
 
   return (
