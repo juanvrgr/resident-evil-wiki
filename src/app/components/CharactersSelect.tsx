@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 
-/* characters select props */
 
 interface CharacterProps {
   character_id: number;
