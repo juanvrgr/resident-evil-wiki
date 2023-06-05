@@ -74,12 +74,12 @@ const Footer = (): JSX.Element => {
           THE END?
         </h6>
         <p className="thanks-text  scale-x-[1] scale-y-[1.2] tracking-wider title-archives__effect pb-2 mb-6 text-center w-full max-[870px]:w-auto">
-          Thanks for watching :D
+          To be continued
         </p>
 
         <div className="w-auto h-auto flex flex-row">
           <a
-            href="https://www.linkedin.com/in/matias-seitour-1a0118240/"
+            href="https://www.linkedin.com/in/juan-manuel-vergara-dev/"
             target="_blank"
             className="relative w-[50px] h-[50px] overflow-hidden m-2 item-footer"
           >
@@ -91,19 +91,7 @@ const Footer = (): JSX.Element => {
             />
           </a>
           <a
-            href="https://twitter.com/MatySeitour"
-            target="_blank"
-            className="relative w-[50px] h-[50px] overflow-hidden m-2 item-footer"
-          >
-            <Image
-              src={"/icons8-twitter-240.png"}
-              height={50}
-              width={50}
-              alt="linkedIn"
-            />
-          </a>
-          <a
-            href="https://github.com/MatySeitour"
+            href="https://github.com/juanvrgr"
             target="_blank"
             className="relative w-[50px] h-[50px] overflow-hidden m-2 item-footer"
           >
@@ -111,7 +99,7 @@ const Footer = (): JSX.Element => {
               src={"/icons8-git-240.png"}
               height={50}
               width={50}
-              alt="linkedIn"
+              alt="gitHub"
             />
           </a>
         </div>
