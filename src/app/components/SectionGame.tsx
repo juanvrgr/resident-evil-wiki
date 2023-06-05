@@ -1,29 +1,17 @@
-/* import react hooks */
 import { useEffect, useState, useRef } from "react";
-
-/* import games data */
 import getGames from "../../utils/games.json";
-
-/* import gsap */
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import SplitType from "split-type";
-
-/* import components */
 import Image from "next/image";
 import CharactersSelect from "./CharactersSelect";
 import InfoCharacter from "./InfoCharacter";
 import Epilogue from "./Epilogue";
-
-/* import useIntersection hook */
 import useIntersection from "../hooks/useIntersection";
-
-/* import react-multi-carousel */
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { ArrowProps, DotProps } from "react-multi-carousel/lib/types";
 
-/* react-multi-carousel interface */
 
 interface CustomLeftArrowProps extends ArrowProps {
   myOwnStuff: string;
@@ -32,7 +20,6 @@ interface CustomRightArrowProps extends ArrowProps {
   myOwnStuff: string;
 }
 
-/* game data received by props */
 interface Props {
   id: number;
   title: string;
@@ -53,8 +40,6 @@ interface Props {
   other_games?: {}[];
 }
 
-/* character selected data */
-
 interface CharacterSelected {
   id: number;
   image_complete: string;
@@ -71,7 +56,6 @@ const SectionGame = ({
   epilogue,
   date,
 }: Props): JSX.Element => {
-  /* react-multi-carousel queries */
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -90,25 +74,18 @@ const SectionGame = ({
       items: 1,
     },
   };
-
-  /* using intersection observer to check if said element is visible 
-    screen receives a value in number that belongs to the id of the section
-  */
+  
   const element = useRef(null);
   const screen = useIntersection(element);
 
-  /* animations */
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, SplitType);
     let mm = gsap.matchMedia();
 
-    /* conditional so animations don't run if screen is 0 */
     if (screen != 0) {
-      /* separates each letter from the text in element */
       const title = document.querySelector(`.game-title__${screen}`);
       const titleSplit = new SplitType(`.game-title__${screen}`);
 
-      /* title game animation */
       gsap.from(`.game-title__${screen} .char`, {
         scrollTrigger: {
           trigger: `.game-title__${screen} .char`,
@@ -123,7 +100,6 @@ const SectionGame = ({
         delay: 0,
       });
 
-      /* epilogue elements */
       const epilogueTitle: HTMLElement[] = gsap.utils.toArray(
         `.epilogue_title__${screen}`
       );
@@ -143,7 +119,6 @@ const SectionGame = ({
         `.line-right__epilogue__${screen}`
       );
 
-      /* epilogue animations */
       epilogueTitle.forEach((title: HTMLElement, i: number) => {
         gsap.to(title, {
           scrollTrigger: {
@@ -211,11 +186,7 @@ const SectionGame = ({
         });
       });
 
-      /* for any resolution above 870 px */
-
       mm.add("(min-width: 870px)", () => {
-        /* prologue title animation */
-
         const prologueTitle: HTMLElement[] = gsap.utils.toArray(
           `.prologue-title__${screen}`
         );
@@ -232,8 +203,6 @@ const SectionGame = ({
             duration: 0.5,
           });
         });
-
-        /* image prologue animation */
 
         const imagePrologue: HTMLElement[] = gsap.utils.toArray(
           `.image-prologue__${screen}`
@@ -269,8 +238,6 @@ const SectionGame = ({
           );
         });
 
-        /* prologue description game animation */
-
         const descriptionGame: HTMLElement[] = gsap.utils.toArray(
           `#description-game__${screen}`
         );
@@ -286,8 +253,6 @@ const SectionGame = ({
             duration: 0.5,
           });
         });
-
-        /* characters title animation */
 
         const charactersTitleContainer: HTMLElement[] = gsap.utils.toArray(
           `.characters-title__container__${screen}`
@@ -306,8 +271,6 @@ const SectionGame = ({
           });
         });
 
-        /* info characters animation */
-
         const infoCharactersContainer: HTMLElement[] = gsap.utils.toArray(
           `.info-characters__container__${screen}`
         );
@@ -322,8 +285,6 @@ const SectionGame = ({
             duration: 0.5,
           });
         });
-
-        /* characters select container animation*/
 
         const charactersSelectContainer: HTMLElement[] = gsap.utils.toArray(
           `.character-select__container__${screen}`
@@ -355,11 +316,7 @@ const SectionGame = ({
         });
       });
 
-      ////////// for any resolution below 870 px //////////
-
       mm.add("(max-width: 870px)", () => {
-        /* game title animation */
-
         const gameTitle: HTMLElement[] = gsap.utils.toArray(
           `.game-title__${screen}`
         );
@@ -377,8 +334,6 @@ const SectionGame = ({
           });
         });
 
-        /* prologue title animation */
-
         const prologueTitle: HTMLElement[] = gsap.utils.toArray(
           `.prologue-title__${screen}`
         );
@@ -394,8 +349,6 @@ const SectionGame = ({
             duration: 0.5,
           });
         });
-
-        /* image prologue animation */
 
         const imagePrologue: HTMLElement[] = gsap.utils.toArray(
           `.image-prologue__${screen}`
@@ -414,8 +367,6 @@ const SectionGame = ({
           });
         });
 
-        /* prologue description game animation */
-
         const descriptionGame: HTMLElement[] = gsap.utils.toArray(
           `#description-game__${screen}`
         );
@@ -431,8 +382,6 @@ const SectionGame = ({
             duration: 0.5,
           });
         });
-
-        /* characters title animation */
 
         const charactersTitleContainer: HTMLElement[] = gsap.utils.toArray(
           `.characters-title__container__${screen}`
@@ -451,8 +400,6 @@ const SectionGame = ({
           });
         });
 
-        /* characters select container animation */
-
         const characterSelectContainer: HTMLElement[] = gsap.utils.toArray(
           `.characters-game__${screen}`
         );
@@ -467,8 +414,6 @@ const SectionGame = ({
           });
         });
 
-        /* characters select animation */
-
         const characterSelect: HTMLElement[] =
           gsap.utils.toArray(".image-character");
         characterSelect.forEach((imageCharacter: HTMLElement, i) => {
@@ -482,8 +427,6 @@ const SectionGame = ({
             duration: 0.5,
           });
         });
-
-        /* info characters animation */
 
         const infoCharactersContainer: HTMLElement[] = gsap.utils.toArray(
           `.info-characters__container__${screen}`
@@ -500,8 +443,6 @@ const SectionGame = ({
           });
         });
 
-        /* text epilogue animation:  */
-
         textEpilogue.forEach((title: HTMLElement, i: number) => {
           gsap.to(title, {
             scrollTrigger: {
@@ -511,7 +452,6 @@ const SectionGame = ({
 
               end: "0px center",
             },
-            /* once the text is visible, add an overflow-y scroll */
             onComplete: () => {
               const textContainer = document.querySelector(
                 `.text-epilogue__container__${screen}`
@@ -526,22 +466,17 @@ const SectionGame = ({
     }
   }, [screen]);
 
-  /* character selected state */
-
   const [characterSelected, setCharacterSelected] =
     useState<CharacterSelected>();
 
-  /* the first character of each game starts by default */
   useEffect(() => {
     if (!characterSelected?.id) {
       setCharacterSelected(characters[0]);
     }
   }, []);
 
-  /* games data */
   const games = getGames.games;
 
-  /* search character by id */
   const handleSearchCharacter = (id: number) => {
     for (let i = 0; i < games.length; i++) {
       for (let a = 0; a < games[i].characters.length; a++) {
@@ -551,8 +486,6 @@ const SectionGame = ({
       }
     }
   };
-
-  /* function that makes a 3d movement effect on the prologue images when you hover*/
 
   const handleMouseMove = (evt: any) => {
     const height = evt?.target.clientHeight;
@@ -571,8 +504,6 @@ const SectionGame = ({
     evt.target.style.transform = newClass;
   };
 
-  /* function that returns to set the positions of the images to default */
-
   const handleMouseOut = (evt: any) => {
     evt.target.style.transform = `
        perspective(500px)
@@ -581,8 +512,6 @@ const SectionGame = ({
          rotateY(0)
          `;
   };
-
-  /* carousel arrows components */
 
   const CustomLeftArrow = ({ onClick }: CustomLeftArrowProps) => {
     return (
@@ -605,8 +534,6 @@ const SectionGame = ({
       </div>
     );
   };
-
-  /* carousel buttons */
 
   const CustomDots = ({ index, active, onClick, carouselState }: DotProps) => {
     return (
