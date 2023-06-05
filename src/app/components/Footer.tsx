@@ -96,7 +96,7 @@ const Footer = (): JSX.Element => {
             className="relative w-[50px] h-[50px] overflow-hidden m-2 item-footer"
           >
             <Image
-              src={"/icons8-git-240.png"}
+              src={"/icons8-github-240.png"}
               height={50}
               width={50}
               alt="gitHub"
