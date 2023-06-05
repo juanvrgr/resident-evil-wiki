@@ -51,7 +51,7 @@ const TitleHome = (): JSX.Element => {
           className="scale-x-[1] scale-y-[1.2] text-4xl mb-2 tracking-wider text__effect text-center max-[870px]:mb-4"
         >
           RESIDENT EVIL{" "}
-          <b className="title-archives__effect text-center">ARCHIVES</b>
+          <b className="title-archives__effect text-center">WIKI</b>
         </h1>
         <h2
           id="archives-title"
