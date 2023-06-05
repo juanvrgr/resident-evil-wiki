@@ -7,14 +7,11 @@ const TitleHome = (): JSX.Element => {
   useEffect(() => {
     let mm = gsap.matchMedia();
 
-    /* for any resolution above 870 px */
     mm.add("(min-width: 870px)", () => {
       gsap.registerPlugin(SplitType);
-      /* separates each letter from the text in element */
       const myText = new SplitType("#title-home");
       const archiveText = new SplitType("#archives-title");
 
-      /* typing animation */
       gsap.from("#title-home .char", {
         x: 0,
         stagger: 0.05,
@@ -32,9 +29,7 @@ const TitleHome = (): JSX.Element => {
       });
     });
 
-    /* for any resolution below 870 px */
     mm.add("(max-width: 870px)", () => {
-      /* text appear */
       gsap.from("#title-home", {
         opacity: 0,
         duration: 1,
