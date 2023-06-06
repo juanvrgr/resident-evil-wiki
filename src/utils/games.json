@@ -3,14 +3,14 @@
       {
         "id": 1,
         "title": "Resident Evil",
-        "description": "The game's plot begins with the arrival of Chris, Jill and Wesker at a mansion located in the woods. There they will meet the undead dwelling in the corridors and rooms. In that place, they will try to escape without being eaten by the dogs that are outside. Soon, they witness the experiments carried out by the most important company in the city, and a list of betrayals that goes all the way to the S.T.A.R.S.",
+        "description": "The game's plot begins with the arrival of Chris, Jill, and Wesker at a mansion located in the woods. There, they will encounter the undead dwelling in the corridors and rooms. In that place, they will try to escape without being eaten by the dogs that are outside. Soon, they witness the experiments carried out by the most important company in the city and a series of betrayals that extend to the S.T.A.R.S.",
         "characters": [
           {
             "id": 1,
             "name": "Chris Redfield",
             "image_select": "/re1/chris/chris-select.webp",
             "image_complete": "/re1/chris/chris-1.png",
-            "description": "Upon joining S.T.A.R.S., he was assigned the position of Alpha Team's scout, consisting of opening up and reconnoitering the ground. As such, exceptional skill in shooting and combat was expected of him, as well as great ability in the use of various weapons."
+            "description": "Upon joining S.T.A.R.S., he was assigned the position of Alpha Team's scout, tasked with opening up and reconnoitering the ground. As such, exceptional shooting and combat skills were expected of him, as well as a great ability to use various weapons."
           },
           {
             "id": 2,
@@ -31,35 +31,35 @@
             "name": "Rebecca Chambers",
             "image_select": "/re1/rebecca/rebecca-select.webp",
             "image_complete": "/re1/rebecca/rebecca.webp",
-            "description": "Rebecca Chambers possesses brilliant intellect and knowledge in medicine (biochemistry). Thanks to such valuable records of hers, they earned her acceptance into the special unit of the R.P.D., known as S.T.A.R.S. she being integrated into it, serving as a doctor within the Bravo Team."
+            "description": "Rebecca Chambers possesses a brilliant intellect and extensive knowledge in medicine, specifically biochemistry. Thanks to her valuable expertise, she earned acceptance into the special unit of the R.P.D., known as S.T.A.R.S. She was integrated into the team, serving as a doctor within the Bravo Team."
           },
           {
             "id": 5,
             "name": "Barry Burton",
             "image_select": "/re1/barry/barry-select.webp",
             "image_complete": "/re1/barry/barry.webp",
-            "description": "Upon joining S.T.A.R.S., He was assigned as a member of Team Alpha under Wekser's orders. he is a great weapons specialist"
+            "description": "Upon joining S.T.A.R.S., he was assigned as a member of Team Alpha under Wesker's orders. He is a highly skilled weapons specialist."
           },
           {
             "id": 6,
             "name": "Zombie",
             "image_select": "/re1/zombie/zombie-logo.webp",
             "image_complete": "/re1/zombie/zombie.webp",
-            "description": "a human being infected with the T-virus. a kind of virus that can make the host a kind of undead"
+            "description": "A human being infected with the T-virus becomes a type of undead, a result of the virus's transformative effects on the host."
           },
           {
             "id": 7,
             "name": "MA-39 Cerberus",
             "image_select": "/re1/cerberus/cerberus-logo.webp",
             "image_complete": "/re1/cerberus/cerberus.webp",
-            "description": "Doberman dogs infected with the T-Virus that have escaped from the research labs under the mansion."
+            "description": "Doberman dogs infected with the T-Virus have escaped from the research labs located beneath the mansion."
           },
           {
             "id": 8,
             "name": "Tyrant T-002",
             "image_select": "/re1/tyrant/tyrant-1-logo.webp",
             "image_complete": "/re1/tyrant/tyrant-1.webp",
-            "description": "The Tyrant T-002 was the first Tyrant Created on the basis of the T-Virus in a living human being, superior in every aspect to its predecessor, the Proto Tyrant. It was a B.O.W. (Big Organic Weapong) created in the laboratory of the Arklay mountains, in the Spencer mansion."
+            "description": "The Tyrant T-002 was the first Tyrant created based on the T-Virus within a living human being. It surpassed its predecessor, the Proto Tyrant, in every aspect, making it a superior B.O.W. (Big Organic Weapon). This creation took place in the laboratory of the Spencer mansion, situated in the Arklay Mountains."
           }
         ],
         "image_prologue": [
@@ -76,7 +76,7 @@
             "link": "/re1/images_game/re1-third.webp"
           }
         ],
-        "epilogue": "In the lab, Wesker reveals his identity: he is a double agent working for Umbrella who has used his minions as guinea pigs to test them against the biological weapons created by the T-Virus and ultimately unleashes Tyrant T-002, a giant humanoid monster created through prolonged exposure to the T-Virus. Upon release, the Tyrant kills Wesker by running its claws through him. Chris/Jill apparently kill the Tyrant using firearms and then activate the self-destruct program to end the lab experiments. Later Chris/Jill contacts the rescue helicopter, when the Tyrant reappears through the roof of the lab onto the helicopter's landing pad and suddenly attacks them. Bullet resistant, the Tyrant is eventually killed when Brad, the helicopter pilot, drops a rocket launcher and Chris/Jill uses it to completely destroy the creature. Chris Redfield and Jill Valentine escape in the helicopter before the mansion explodes and the game finally ends.",
+        "epilogue": "In the lab, Wesker unveils his true identity as a double agent working for Umbrella. He has used his minions as guinea pigs to test them against the biological weapons created by the T-Virus. Eventually, Wesker unleashes the Tyrant T-002, a colossal humanoid monster created through prolonged exposure to the T-Virus. Tragically, the Tyrant kills Wesker by impaling him with its claws. Chris/Jill engage in a fierce battle with the Tyrant, utilizing their firearms to seemingly kill the monstrous creature. They then activate the self-destruct program to put an end to the lab experiments. As they contact the rescue helicopter, the Tyrant resurfaces through the lab's roof onto the helicopter's landing pad, launching a sudden attack. Despite its resistance to bullets, the Tyrant meets its demise when Brad, the helicopter pilot, drops a rocket launcher. Chris/Jill seize the opportunity and use the rocket launcher to obliterate the creature. With the Tyrant defeated, Chris Redfield and Jill Valentine escape in the helicopter just moments before the mansion explodes, bringing the game to its climactic conclusion.",
         "date": "1998"
       },
       {
